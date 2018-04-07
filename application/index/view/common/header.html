@@ -1,0 +1,37 @@
+<div class="ladytop">
+            <div class="nav">
+                <div class="left"><a href=""><img src="__PUBLIC__/images
+/hunshang.png" alt="wed114婚尚"></a></div>
+                <div class="right">
+                    <div class="box">
+                    <a href="{:url('index/index')}"  rel='dropmenu209'>首页</a> 
+                     {volist name="cateres" id="vo"}
+                        <a href="{:url('cate/index',array('cateid'=>$vo['id']))}"  rel='dropmenu209'>{$vo.catename}</a> 
+                     {/volist}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="hotmenu">
+	<div class="con">热门标签：
+    <a href="http://www.chuanke.com/s2260700.html" target="_blank" style="color:#f00;">ThinkPHP视频教程下载</a>
+    {volist name="tagres" id="vo"}
+    <a href='http://127.0.0.1/tp5/public/index.php/index/search/index?keywords={$vo.tagname}'>{$vo.tagname}</a>
+    {/volist}
+    </div>
+</div>
+rpm -e --nodeps php-gd-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-ldap-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-mysql-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-pdo-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-imap-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-mbstring-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-bcmath-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-cli-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-xmlrpc-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-pear-1.9.4-5.el6.noarch
+rpm -e --nodeps php-common-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-odbc-5.3.3-49.el6.x86_64
+rpm -e --nodeps php-xml-5.3.3-49.el6.x86_64
+./configure --with-php-config=/usr/bin/php-config  --with-libmemcached-dir=/usr/local/libmemcached --enable-memcached
